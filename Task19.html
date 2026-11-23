@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 19</title>
+    <style>
+        body { font-family: sans-serif; max-width: 400px; margin: 40px auto; }
+        input, button { display: block; width: 100%; margin: 10px 0; padding: 8px; box-sizing: border-box; }
+        button { cursor: pointer; }
+        p { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h3>Задание 19: Цилиндр</h3>
+    <input type="number" id="r" placeholder="Введите радиус (s)" step="any">
+    <input type="number" id="h" placeholder="Введите высоту (h)" step="any">
+    <button onclick="calculate()">Вычислить</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let r = parseFloat(document.getElementById('r').value);
+            let h = parseFloat(document.getElementById('h').value);
+            let V = Math.PI * (r ** 2) * h;
+            let Sbok = 2 * Math.PI * r * h;
+            document.getElementById('result').innerText = 
+                `Объем цилиндра: ${V.toFixed(2)}\nБоковая площадь поверхности: ${Sbok.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

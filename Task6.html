@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 6</title>
+    <style>
+        body { font-family: sans-serif; max-width: 400px; margin: 40px auto; }
+        input, button { display: block; width: 100%; margin: 10px 0; padding: 8px; box-sizing: border-box; }
+        button { cursor: pointer; }
+        p { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h3>Задание 6: Расстояние между точками</h3>
+    <input type="number" id="x1" placeholder="Введите x1" step="any">
+    <input type="number" id="y1" placeholder="Введите y1" step="any">
+    <input type="number" id="x2" placeholder="Введите x2" step="any">
+    <input type="number" id="y2" placeholder="Введите y2" step="any">
+    <button onclick="calculate()">Вычислить</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let x1 = parseFloat(document.getElementById('x1').value);
+            let y1 = parseFloat(document.getElementById('y1').value);
+            let x2 = parseFloat(document.getElementById('x2').value);
+            let y2 = parseFloat(document.getElementById('y2').value);
+            let d = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+            document.getElementById('result').innerText = `Расстояние между точками равно: ${d.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

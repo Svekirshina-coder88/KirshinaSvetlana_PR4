@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 5</title>
+    <style>
+        body { font-family: sans-serif; max-width: 400px; margin: 40px auto; }
+        input, button { display: block; width: 100%; margin: 10px 0; padding: 8px; box-sizing: border-box; }
+        button { cursor: pointer; }
+        p { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h3>Задание 5: Десятины в м²</h3>
+    <input type="number" id="s" placeholder="Введите площадь в десятинах" step="any">
+    <button onclick="calculate()">Вычислить</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let s = parseFloat(document.getElementById('s').value);
+            let s2 = s * 1.0925 * 10000;
+            document.getElementById('result').innerText = `Площадь в квадратных метрах равна: ${s2.toFixed(2)} м²`;
+        }
+    </script>
+</body>
+</html>
